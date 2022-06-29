@@ -69,6 +69,10 @@ header('Content-Type: image/png');
 // ファイル名を指定して画像出力
 imagepng($image);
 ```
+[利用フリー画像](https://sozai-good.com/illust/free-background/cute/29847)
+![image](https://user-images.githubusercontent.com/1501327/176339376-495c0648-45c0-4c6a-9ead-36eb99ec22e6.png)
+
+
 
 ### [PHP GDで影付き文字を描画](https://www.geekpage.jp/web/php-gd/text-shadow-1.php)
 
