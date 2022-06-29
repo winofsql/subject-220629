@@ -191,5 +191,7 @@ imagejpeg ( $png_small, "blue-small.png" );
 ?>
 ```
 
+[ImageMagick](https://imagemagick.biz/)
+
 
 ### [jQuery UI のテーマ一覧](https://javascript.programmer-reference.com/jqueryui-theme/)
