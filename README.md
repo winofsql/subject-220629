@@ -250,5 +250,32 @@ $(function(){
 <input id="btn" name="btn" type="button" value="実行">
 ```
 
+```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function(){
+
+	var obj = {
+		"月曜": "卒業進級",
+		"火曜": "就職",
+		"水曜": "WEBアプリ"
+	};
+
+	$("#btn").on( "click", function(){
+
+		$.each( obj, function( key, value ){
+
+			console.log(key + ":" + value);
+
+		});
+
+	});
+
+
+});
+</script>
+<input id="btn" name="btn" type="button" value="実行">
+```
+
 
 ### [jQuery UI のテーマ一覧](https://javascript.programmer-reference.com/jqueryui-theme/)
