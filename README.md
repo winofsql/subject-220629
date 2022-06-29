@@ -156,7 +156,40 @@ imagedestroy($img);
 
 ```
 
+### 画像縮小
+```php
+<?php
 
+$target	= getimagesize( "blue.png" );
+
+// 現在のサイズ
+$width	= $target[0];
+$height	= $target[1];
+
+$png = imagecreatefrompng( "blue.png" );
+
+$width_new	= 150;	// 幅固定
+$height_new = (int)( ($height/$width)*$width_new );
+
+$png_small = imagecreatetruecolor( $width_new, $height_new );
+
+$ret = imagecopyresampled(
+    $png_small,
+    $png,
+    0,
+    0,
+    0,
+    0,
+    $width_new,
+    $height_new,
+    $width,
+    $height
+);
+
+imagejpeg ( $png_small, "blue-small.png" );
+
+?>
+```
 
 
 ### [jQuery UI のテーマ一覧](https://javascript.programmer-reference.com/jqueryui-theme/)
