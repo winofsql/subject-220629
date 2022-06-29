@@ -107,7 +107,54 @@ ImagePNG($img);
 ```
 
 ### [PHP | GDで透過背景のテキスト画像を作成する方法](https://1-notes.com/php-gd-create-text-image-with-transparent-background/)
+```php
+<?php
 
+//テキスト
+$text = '透過テキスト画像';
+
+//テキストサイズ
+$font_size = 50;
+
+//文字数
+$mojisu = mb_strlen($text);
+
+//フォント指定
+// $font = 'rounded-x-mplus-1c-heavy.ttf';
+$font = "C:\Windows\Fonts\HGRPP1.TTC";
+
+//画像サイズ調整（文字数*文字サイズ*余白加味）
+$w = $mojisu * $font_size * 1.37;
+$h = $font_size * 1.7;
+
+//ベース画像作成
+$img = imagecreatetruecolor($w, $h);
+
+//文字色
+$font_color = ImageColorAllocate($img, 255, 99, 71);
+
+imagealphablending( $img, false ); // アルファブレンディングを無効
+imageSaveAlpha( $img, true ); // アルファチャンネルを有効
+$transparent = imagecolorallocatealpha( $img, 0, 0, 0, 127 ); // 透明度を持つ色を作成
+imagefilledrectangle( $img, 0,0,$w,$h, $transparent );
+
+//テキスト書き出し
+ImageTTFText($img, $font_size, 0, $font_size * 0.1, $font_size * 1.3, $font_color, $font, $text);
+
+//画像の表示
+// header('Content-Type: image/png');
+imagepng($img, "touka.png");
+
+//画像として指定パスに保存
+// imagepng($img, 'sample.png');
+// imagejpeg($img, 'sample.jpg');
+// imagegif($img, 'sample.gif');
+// imagewebp($img, 'sample.webp');
+
+//画像データをメモリから削除
+imagedestroy($img);
+
+```
 
 
 
