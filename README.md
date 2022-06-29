@@ -227,6 +227,28 @@ $(function(){
 </div>
 ```
 
+```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function(){
+
+	var array = [1,2,3,4,10,11];
+
+	$("#btn").on( "click", function(){
+
+		$.each( array, function( index, value ){
+
+			console.log(index + ":" + value);
+
+		});
+
+	});
+
+
+});
+</script>
+<input id="btn" name="btn" type="button" value="実行">
+```
 
 
 ### [jQuery UI のテーマ一覧](https://javascript.programmer-reference.com/jqueryui-theme/)
