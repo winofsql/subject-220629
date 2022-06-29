@@ -193,5 +193,40 @@ imagejpeg ( $png_small, "blue-small.png" );
 
 [ImageMagick](https://imagemagick.biz/)
 
+### jQuery の each
+```javascript
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function(){
+
+	$("#btn").on( "click", function(){
+
+		$(".target").each(function( index, element ){
+
+			console.log(index);
+			console.log(element);
+			console.log( $(this).text() );
+
+		});
+
+	});
+
+
+});
+</script>
+
+<input id="btn" name="btn" type="button" value="実行">
+
+<div class="target">あ</div>
+<div class="target">い</div>
+<div class="target">う</div>
+<div class="target">え</div>
+<div class="target">お</div>
+<div>
+	<span class="target">すぱん</span>
+</div>
+```
+
+
 
 ### [jQuery UI のテーマ一覧](https://javascript.programmer-reference.com/jqueryui-theme/)
