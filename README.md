@@ -82,7 +82,7 @@ $img = ImageCreateTrueColor(1157, 720);
 $img2 = ImageCreateTrueColor(1157, 720);
 $img3 = ImageCreateTrueColor(1157, 720);
 
-// 背景を白く塗りつぶす #e3685a
+// 背景を白く塗りつぶす
 $white = ImageColorAllocate($img, 0xff, 0xff, 0xff);
 ImageFilledRectangle($img, 0,0, 1157,720, $white);
 
