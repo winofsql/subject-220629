@@ -194,8 +194,9 @@ imagejpeg ( $png_small, "blue-small.png" );
 
 ?>
 ```
-
+<div>
 [ImageMagick](https://imagemagick.biz/)
+</div>
 
 ### jQuery の each
 ```javascript
