@@ -72,41 +72,13 @@ imagepng($image);
 [利用フリー画像](https://sozai-good.com/illust/free-background/cute/29847) : http://localhost/blue.php?x=350&y=400
 ![image](https://user-images.githubusercontent.com/1501327/176339376-495c0648-45c0-4c6a-9ead-36eb99ec22e6.png)
 
-### [PHP GDで影付き文字を描画](https://www.geekpage.jp/web/php-gd/text-shadow-1.php)
+### PHP GDで影付き文字を描画
 ```php
-<?php
-
-$fontfile = "C:\Windows\Fonts\HGRPP1.TTC";
-
-$img = ImageCreate(1157, 720);
-
-// 背景を白く塗りつぶす #e3685a
-// $white = ImageColorAllocate($img, 0xe3, 0x68, 0x5a);
-$white = ImageColorAllocate($img, 0xff, 0xff, 0xff);
-ImageFilledRectangle($img, 0,0, 1157,720, $white);
-
-// 影用に灰色を用意する
-$grey = ImageColorAllocate($img, 0x99, 0x99, 0x99);
-// 本体用に黒を用意する
-$black = ImageColorAllocate($img, 0x00, 0x00, 0x00);
-
-$text = "熱中症に\n気を付けましょう！"; // 書き込む文字列
-ImageTTFText($img, 72, 0, 20, 150, $grey, $fontfile, $text);
-
-// /* 影の部分をぼかす */
-ImageFilter($img, IMG_FILTER_GAUSSIAN_BLUR);
-ImageFilter($img, IMG_FILTER_GAUSSIAN_BLUR);
-ImageFilter($img, IMG_FILTER_GAUSSIAN_BLUR);
-
-// /* 本体を書き込む */
-ImageTTFText($img, 72, 0, 20-5, 150-3, $black, $fontfile, $text);
-
-header('Content-Type: image/png');
-ImagePNG($img);
+](https://www.geekpage.jp/web/php-gd/text-shadow-1.php)
 
 ```
 
-### [PHP | GDで透過背景のテキスト画像を作成する方法](https://1-notes.com/php-gd-create-text-image-with-transparent-background/)
+### PHP | GDで透過背景のテキスト画像を作成する方法
 ```php
 <?php
 
