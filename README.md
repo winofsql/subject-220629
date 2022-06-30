@@ -74,7 +74,43 @@ imagepng($image);
 
 ### PHP GDで影付き文字を描画
 ```php
-](https://www.geekpage.jp/web/php-gd/text-shadow-1.php)
+<?php
+
+$fontfile = "C:\Windows\Fonts\HGRPP1.TTC";
+
+$img = ImageCreateTrueColor(1157, 720);
+$img2 = ImageCreateTrueColor(1157, 720);
+$img3 = ImageCreateTrueColor(1157, 720);
+
+// 背景を白く塗りつぶす #e3685a
+$white = ImageColorAllocate($img, 0xff, 0xff, 0xff);
+ImageFilledRectangle($img, 0,0, 1157,720, $white);
+
+$black = ImageColorAllocate($img, 0x00, 0x00, 0x00);
+
+$text = "熱中症に\n気を付けましょう！"; // 書き込む文字列
+ImageTtfText($img, 72, 0, 20, 150, $black, $fontfile, $text);
+
+
+ImageCopy($img2, $img, 0, 0, 0, 0, 1157,720);
+ImageCopy($img3, $img, 0, 0, 0, 0, 1157,720);
+
+
+$gaussian = array(array(1.0, 2.0, 1.0), array(2.0, 4.0, 2.0), array(1.0, 2.0, 1.0));
+for( $i = 0; $i < 4; $i++ ) {
+	ImageConvolution($img2, $gaussian, 16, 0);
+}
+
+ImageCopyMerge($img, $img2, 5,5, 0,0, 1157,720, 100);
+ImageCopyMerge($img, $img3, 0,0, 0,0, 1157,720, 60);
+
+ImageTtfText($img, 72, 0, 20, 150, $black, $fontfile, $text);
+
+header("Content-type: image/png");
+imagepng($img);
+
+
+
 
 ```
 
