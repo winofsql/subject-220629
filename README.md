@@ -152,12 +152,6 @@ ImageTTFText($img, $font_size, 0, $font_size * 0.1, $font_size * 1.3, $font_colo
 // header('Content-Type: image/png');
 imagepng($img, "touka.png");
 
-//画像として指定パスに保存
-// imagepng($img, 'sample.png');
-// imagejpeg($img, 'sample.jpg');
-// imagegif($img, 'sample.gif');
-// imagewebp($img, 'sample.webp');
-
 //画像データをメモリから削除
 imagedestroy($img);
 
