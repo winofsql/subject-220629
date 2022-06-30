@@ -157,6 +157,9 @@ imagedestroy($img);
 
 ```
 
+![image](https://user-images.githubusercontent.com/1501327/176644844-8b670e51-d27e-4553-bf4d-3d8fd8614a01.png)
+
+
 ### 画像縮小
 ```php
 <?php
