@@ -110,7 +110,7 @@ header("Content-type: image/png");
 imagepng($img);
 ```
 
-![image](https://user-images.githubusercontent.com/1501327/176643701-9a43a409-74e7-414c-b5a5-a6635d4769d0.png)
+![image](https://user-images.githubusercontent.com/1501327/176643898-abe8746f-ae44-466a-ae94-214bae610f88.png)
 
 
 ### PHP | GDで透過背景のテキスト画像を作成する方法
