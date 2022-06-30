@@ -194,7 +194,7 @@ imagejpeg ( $png_small, "blue-small.png" );
 
 ?>
 ```
-<div>
+<div style="background-color:black;">
 [ImageMagick](https://imagemagick.biz/)
 </div>
 
