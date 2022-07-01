@@ -62,8 +62,6 @@ imagettftext(
     $fontfile,  // フォントファイル
     $text);     // 挿入文字列
 
-header('Content-Type: image/png');
-
 // ファイル名を指定して画像出力
 imagepng($image,"gd-image.png");
 ```
