@@ -35,7 +35,7 @@ $color = imagecolorallocate($image, 0xC0, 0xC0, 0xC0);
 $size = 72;
 
 // 挿入する文字列の角度
-$angle = 30;
+$angle = 0;
 
 if ( !isset( $_GET["x"] ) ) {
     $_GET["x"] = 100;
