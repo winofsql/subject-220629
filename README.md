@@ -19,9 +19,6 @@ fclose( $fp );
 // 文字列を挿入する先の画像
 $file = "blue.png";
 
-// 出力後のファイル名
-$newfile = "bule_moji.png";
-
 // コピー先画像作成
 $image = imagecreatefrompng($file);
 
