@@ -16,8 +16,6 @@ fclose( $fp );
 ```
 ### [PHPで画像に文字を重ねるimagettftext()の使い方](https://dev-lib.com/php-image-imagettftext/)
 ```php
-<?php
-
 // 文字列を挿入する先の画像
 $file = "blue.png";
 
@@ -67,7 +65,7 @@ imagettftext(
 header('Content-Type: image/png');
 
 // ファイル名を指定して画像出力
-imagepng($image);
+imagepng($image,"gd-image.png");
 ```
 [利用フリー画像](https://sozai-good.com/illust/free-background/cute/29847) : http://localhost/blue.php?x=350&y=400
 ![image](https://user-images.githubusercontent.com/1501327/176339376-495c0648-45c0-4c6a-9ead-36eb99ec22e6.png)
